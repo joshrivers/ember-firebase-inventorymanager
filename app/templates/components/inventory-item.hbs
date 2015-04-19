@@ -1,0 +1,9 @@
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+    <h4>{{item.model.description}}{{#if item.model.isContainer}}&nbsp;<img ng-show="thing.container" src="/assets/solid-iron-chest.png">{{/if}}&nbsp;<i class="click-target glyphicon glyphicon-pencil" {{action "edit"}}/>&nbsp;<i class="click-target glyphicon glyphicon-move" {{action "move"}}/></h4>
+    {{#each child in item.children}}
+    {{#inventory-item item=child edit="editItem" move="moveItem"}}{{/inventory-item}}
+    {{/each}}
+</div>
+</div>

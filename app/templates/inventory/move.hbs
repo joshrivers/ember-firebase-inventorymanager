@@ -1,0 +1,6 @@
+<h1>Inventory Items</h1>
+{{#inventory-move-item item=root move="moveItem"}}{{/inventory-move-item}}
+{{#each inventory in rootItems}}
+
+{{#inventory-move-item item=inventory move="moveItem"}}{{/inventory-move-item}}
+{{/each}}
